@@ -3,6 +3,7 @@ import SmurfCard from './smurfCard';
 import { fetchSmurfs } from '../actions/actions';
 import { connect } from 'react-redux';
 
+
 class SmurfList extends React.Component {
     constructor(props) {
         super(props);
@@ -10,7 +11,9 @@ class SmurfList extends React.Component {
             smurfs:[]
         }
     }
-    
+    componentDidMount(){
+        
+    }
     render() {
         
     
