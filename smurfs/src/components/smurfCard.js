@@ -4,7 +4,9 @@ class SmurfCard extends React.Component{
     constructor(props){
         super(props);
     }
-
+    componenDidMount(){
+        console.log(this.props)
+    }
     render(){
         return(
             <div>

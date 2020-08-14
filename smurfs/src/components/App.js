@@ -3,6 +3,11 @@ import "./App.css";
 import SmurfList from "./smurfList";
 import SmurfForm from "./smurfForm";
 class App extends Component {
+  constructor(){
+    super();
+  }
+
+
   render() {
     return (
       <div className="App">
