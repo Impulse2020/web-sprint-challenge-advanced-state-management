@@ -2,11 +2,20 @@ import React, { Component } from "react";
 import "./App.css";
 import SmurfList from "./smurfList";
 import SmurfForm from "./smurfForm";
-class App extends Component {
-  constructor(){
-    super();
-  }
+import { connect } from "react-redux";
+import { fetchSmurfs } from '../actions/actions';
 
+
+class App extends Component {
+  constructor(props){
+    super(props);
+
+  }
+  componentDidMount(){
+    // console.log(this.props)
+     this.props.fetchSmurfs();
+     console.log(this.props.smurfs)
+ }
 
   render() {
     return (
@@ -20,5 +29,10 @@ class App extends Component {
     );
   }
 }
+const mapStateToProps = () =>{
+  return{
+  
+  }
+}
 
-export default App;
+export default connect(mapStateToProps, {fetchSmurfs})(App);

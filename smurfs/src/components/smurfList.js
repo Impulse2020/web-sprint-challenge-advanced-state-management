@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import SmurfCard from './smurfCard';
-import { fetchSmurfs } from '../actions/actions';
 import { connect } from 'react-redux';
 
 
@@ -8,24 +7,24 @@ class SmurfList extends React.Component {
     constructor(props) {
         super(props);
         this.state ={
-            smurfs:[]
+            smurfs:props.smurfs,
         }
     }
-    componentDidMount(){
-        
-    }
-    render() {
-        
     
+    render() {
         return (
             <div>
-            {this.props.smurfs.map((smurf) => (
-            <SmurfCard key={smurf.id} smurf={smurf} />))}
+            {this.props.smurfs.map((smurf) => ( 
+            <SmurfCard key={smurf.id} smurf={smurf} />)) }
             </div>
         )
     }
     
 }
+
+// store.dispatch(fetchSmurfs);
+
+
 const mapStateToProps = (state) => {
     return {
         smurfs: state.smurfs,
@@ -34,4 +33,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, { fetchSmurfs })(SmurfList);
+export default connect(mapStateToProps)(SmurfList);
