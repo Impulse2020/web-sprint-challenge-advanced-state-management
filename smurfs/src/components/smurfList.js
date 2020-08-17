@@ -14,12 +14,11 @@ class SmurfList extends React.Component {
     render() {
         return (
             <div>
-            {this.props.smurfs.map((smurf) => ( 
-            <SmurfCard key={smurf.id} smurf={smurf} />)) }
+            {this.props.smurfs.length ? this.props.smurfs.map((smurf) => ( 
+            <SmurfCard key={smurf.id} smurf={smurf} />)) : console.log(this.props) }
             </div>
         )
-    }
-    
+    }    
 }
 
 // store.dispatch(fetchSmurfs);

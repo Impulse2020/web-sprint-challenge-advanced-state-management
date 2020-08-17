@@ -44,7 +44,7 @@ const reducer = (state = initialState, action) => {
         case POST_SUCCESS:
             return {
                 ...state,
-                smurfs: action.payload,
+                smurfs: [...state.smurfs, action.payload],
                 isFETCHING: false,
                 error: ''
             }

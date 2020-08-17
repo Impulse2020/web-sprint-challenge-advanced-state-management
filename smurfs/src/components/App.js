@@ -12,9 +12,9 @@ class App extends Component {
 
   }
   componentDidMount(){
-    // console.log(this.props)
+    
      this.props.fetchSmurfs();
-     console.log(this.props.smurfs)
+     
  }
 
   render() {
@@ -23,8 +23,8 @@ class App extends Component {
         <h1>SMURFS!</h1>
         <div>We gotta get these smurfs!</div>
         <div>Have fun!</div>
-        <SmurfList />
         <SmurfForm />
+        <SmurfList />
       </div>
     );
   }

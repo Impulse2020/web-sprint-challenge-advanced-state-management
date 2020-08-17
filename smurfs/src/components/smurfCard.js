@@ -7,7 +7,7 @@ class SmurfCard extends React.Component{
     render(){
         return(
             <div>
-                {console.log(this.props)}
+                
                 <h2>name:{this.props.smurf.name}</h2>
                 <h2>Age:{this.props.smurf.age}</h2>
                 <h2>Height:{this.props.smurf.height}</h2>

@@ -29,9 +29,9 @@ class SmurfForm extends React.Component {
             age: "",
             height: ""
         })
-        console.log(this.state.input);
         this.props.POSTsmurfs(this.state);
-        <SmurfList />
+        
+        
     }
 
     render() {
